@@ -1,0 +1,85 @@
+<!--Student name: Andy Mejia
+Class: P3 Even Days
+Teacher: Mr. Irimina
+9/24/2023 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        <!--Countdown Sample-->
+        function shoutZero()
+    {
+        console.log("0!");
+    }
+    
+    function shoutOne()
+    {
+        console.log("1!");
+        shoutZero();
+    }
+
+    function shoutTwo()
+    {
+        console.log("2!");
+        shoutOne();
+    }
+    function shoutThree()
+    {
+        console.log("3!");
+        shoutTwo();
+    }
+    function shoutFour()
+    {
+        console.log("4!");
+        shoutThree();
+    }
+    function shoutFive()
+    {
+        console.log("5!");
+        shoutFour();
+    }
+    function shoutSix()
+    {
+        console.log("6!");
+        shoutFive();
+    }
+    function shoutSeven()
+    {
+        console.log("7!");
+        shoutSix();
+    }
+    function shoutEight()
+    {
+        console.log("8!");
+        shoutSeven();
+    }
+    function shoutNine()
+    {
+        console.log("9!");
+        shoutEight();
+    }
+    function shoutTen()
+    {
+        console.log("10!");
+        shoutNine();
+    }
+        greet();
+    </script>
+</head>
+<body     onload="greet()";>
+    <button onclick="shoutTen();">Count down from 10</button>
+    <div> This is in a div</div>
+    <div>This is also in a div</div>
+    <span>THis is in a span</span>
+    <span> This is also in a span. What's different?</span>
+    <h1>I am an h1</h1>
+    <h2>I am an h2.</h2>
+    <h3>I am an h3</h3>
+    <h4>I am an h4</h4>
+    <h5>I am an h5</h5>
+    <h6>I am an h6</h6>
+</body>

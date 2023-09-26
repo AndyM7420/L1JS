@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       
+        function initialize(){
+            clicks=document.getElementById("count");
+            negativeButton=document.getElementById("negativebtn");
+
+            numClicks=0;
+            negativesAllowed=false;
+        }
+        function display(){
+            clicks.innerHTML=numClicks;
+            if(!negativesAllowed){
+                negativeButton.innerHTML="Negatives are OFF";
+               
+            
+            }
+            else{
+                negativeButton.innerHTML="Negatives are ON";
+            }
+        }
+        function toggleNegatives(){
+           negativesAllowed=!negativesAllowed;
+           if(numClicks<0){
+                    numClicks=0;
+                }
+            display();
+        }
+        function addcount(){
+            numClicks++;
+            display();
+        }
+        function minusCount(){
+            numClicks--;
+            if(numClicks<0&&!negativesAllowed){
+                numClicks=0;
+            }
+            display();
+        }
+    
+
+
+    </script>
+</head>
+<body onload="initialize();">
+    <span id="count">0</span>
+    <button onclick="addcount();">
+        Add
+    </button>
+    <button onclick="minusCount();">Subtract</button>
+    <button onclick="toggleNegatives();" id="negativebtn">Negatives are OFF</button>
+</body>
+</html>
